@@ -1,178 +1,130 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es-MX">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proyectos :: Portafolio</title>
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap" rel="stylesheet">
 
     <link rel="icon" href="../img/O.png" type="image/png" sizes="32x32">
-    
     <link rel="stylesheet" href="../styles/style.css">
 </head>
-<body>
-
-    <!-- El 'main' es el cuerpo de la terminal -->
+<body data-page="projects" data-tty="ttys003">
     <main class="terminal-body">
-        
-        <!-- Mensaje de "login" -->
         <div class="terminal-line">
-            <span class="terminal-login"></span> </div>
+            <span class="terminal-login"></span>
         </div>
 
-        <!-- Primer prompt: Navegación -->
+        <div class="language-switch" role="group" aria-label="Selector de idioma" data-i18n-aria-label="common.languageLabel">
+            <button type="button" class="language-switch__button" data-language-option="es">ES</button>
+            <button type="button" class="language-switch__button" data-language-option="en">EN</button>
+        </div>
+
         <div class="terminal-prompt">
             <span class="prompt-symbol">&gt;</span>
             <span class="prompt-command">cat navigation.txt</span>
         </div>
-        
-        <!-- Salida: La navegación -->
-        <nav class="terminal-nav">
-            <a href="../index.html">[ Inicio ]</a>
-            <a href="about.html">[ Sobre mí ]</a>
-            <a href="projects.html">[ Proyectos ]</a>
-            <a href="certificates.html">[ Certificados ]</a>
-            <a href="contact.html">[ Contacto ]</a> </nav>
 
-        <!-- Segundo prompt: "Proyectos" -->
+        <nav class="terminal-nav">
+            <a href="../index.html" data-i18n="common.nav.home">[ Inicio ]</a>
+            <a href="about.html" data-i18n="common.nav.about">[ Sobre mí ]</a>
+            <a href="projects.html" data-i18n="common.nav.projects">[ Proyectos ]</a>
+            <a href="certificates.html" data-i18n="common.nav.certificates">[ Certificados ]</a>
+            <a href="contact.html" data-i18n="common.nav.contact">[ Contacto ]</a>
+        </nav>
+
         <div class="terminal-prompt">
             <span class="prompt-symbol">&gt;</span>
             <span class="prompt-command">ls -l ./projects</span>
         </div>
-        
-        <!-- 
-          Salida: Tu grid de proyectos. 
-          Usamos las clases .proyectos-grid y .proyecto-card
-          que definiremos en nuestro CSS.
-        -->
-        <section class="proyectos-grid">
 
+        <section class="proyectos-grid">
             <article class="proyecto-card">
-                <img class="proyecto-card__imagen" src="../assets/nextstep_architecture.png" alt="Imagen de la arquitectura de NextStep Science">
+                <img class="proyecto-card__imagen" src="../assets/nextstep_architecture.png" alt="Imagen de la arquitectura de NextStep Science" data-i18n-alt="projects.nextstep.alt">
                 <div class="proyecto-card__contenido">
                     <h2 class="proyecto-card__titulo">NextStep Science</h2>
-                    <p class="proyecto-card__texto">Asistente multimodal de IA para investigación científica (Angular/Azure Serverless). Orquesta análisis de datos experimentales aplicando un estricto pipeline de seguridad multicapa para garantizar pasos de acción acotados y seguros.</p>
+                    <p class="proyecto-card__texto" data-i18n="projects.nextstep.description">Asistente multimodal de IA para investigación científica (Angular/Azure Serverless). Orquesta análisis de datos experimentales aplicando un estricto pipeline de seguridad multicapa para garantizar pasos de acción acotados y seguros.</p>
                     <div class="proyecto-card__enlaces">
-                        <a class="proyecto-card__link" href="https://github.com/sabinaixchelgm/NextStep-Science"><img src="../assets/github.png" alt="github icon"> Github</a>
-                        <a class="proyecto-card__link" href="https://giotechnoo.blogspot.com/"><img src="../assets/logo-blogger.png" alt="blogger icon"> Blog</a>
+                        <a class="proyecto-card__link" href="https://github.com/sabinaixchelgm/NextStep-Science"><img src="../assets/github.png" alt="github icon"> <span data-i18n="common.actions.github">GitHub</span></a>
+                        <a class="proyecto-card__link" href="https://giotechnoo.blogspot.com/"><img src="../assets/logo-blogger.png" alt="blogger icon"> <span data-i18n="common.actions.blog">Blog</span></a>
                     </div>
                 </div>
             </article>
 
-            <!-- PROYECTO 1 -->
             <article class="proyecto-card">
-                <img class="proyecto-card__imagen" src="../assets/lotus-verify.png" alt="Imagen de LotusVerify funcionando">
+                <img class="proyecto-card__imagen" src="../assets/lotus-verify.png" alt="Imagen de LotusVerify funcionando" data-i18n-alt="projects.lotus.alt">
                 <div class="proyecto-card__contenido">
                     <h2 class="proyecto-card__titulo">LotusVerify</h2>
-                    <p class="proyecto-card__texto">Extensión de navegador y backend (Java/Spring Boot, Azure) para auditar y validar salidas de modelos IA (LLMs). Utiliza RAG invertido y Azure Cognitive Services para mitigar alucinaciones y desinformación.</p>
+                    <p class="proyecto-card__texto" data-i18n="projects.lotus.description">Extensión de navegador y backend (Java/Spring Boot, Azure) para auditar y validar salidas de modelos IA (LLMs). Utiliza RAG invertido y Azure Cognitive Services para mitigar alucinaciones y desinformación.</p>
                     <div class="proyecto-card__enlaces">
-                        <a class="proyecto-card__link" href="https://github.com/Gi0yis/lotus-verify"><img src="../assets/github.png" alt="github icon"> Github</a>
-                        <a class="proyecto-card__link" href="https://giotechnoo.blogspot.com/"><img src="../assets/logo-blogger.png" alt="blogger icon"> Blog</a>
+                        <a class="proyecto-card__link" href="https://github.com/Gi0yis/lotus-verify"><img src="../assets/github.png" alt="github icon"> <span data-i18n="common.actions.github">GitHub</span></a>
+                        <a class="proyecto-card__link" href="https://giotechnoo.blogspot.com/"><img src="../assets/logo-blogger.png" alt="blogger icon"> <span data-i18n="common.actions.blog">Blog</span></a>
                     </div>
                 </div>
             </article>
 
-            <!-- PROYECTO 2 -->
             <article class="proyecto-card">
-                <img class="proyecto-card__imagen" src="../assets/roi-pro.png" alt="Imagen demo QuoVerit">
+                <img class="proyecto-card__imagen" src="../assets/roi-pro.png" alt="Imagen demo QuoVerit" data-i18n-alt="projects.quoverit.alt">
                 <div class="proyecto-card__contenido">
                     <h2 class="proyecto-card__titulo">QuoVerit</h2>
-                    <p class="proyecto-card__texto">Plataforma Full-Stack (Next.js/Flask) para cálculo de ROI y análisis de métricas empresariales. Integra Azure Machine Learning y Azure Functions para procesamiento de datos escalable y generación de recomendaciones automatizadas.</p>
+                    <p class="proyecto-card__texto" data-i18n="projects.quoverit.description">Plataforma Full-Stack (Next.js/Flask) para cálculo de ROI y análisis de métricas empresariales. Integra Azure Machine Learning y Azure Functions para procesamiento de datos escalable y generación de recomendaciones automatizadas.</p>
                     <div class="proyecto-card__enlaces">
-                        <a class="proyecto-card__link" href="https://github.com/The-Manuel-G/ROI-calculator-transformation-success"><img src="../assets/github.png" alt="github icon"> Github</a>
-                        <a class="proyecto-card__link" href="https://giotechnoo.blogspot.com/"><img src="../assets/logo-blogger.png" alt="blogger icon"> Blog</a>
+                        <a class="proyecto-card__link" href="https://github.com/The-Manuel-G/ROI-calculator-transformation-success"><img src="../assets/github.png" alt="github icon"> <span data-i18n="common.actions.github">GitHub</span></a>
+                        <a class="proyecto-card__link" href="https://giotechnoo.blogspot.com/"><img src="../assets/logo-blogger.png" alt="blogger icon"> <span data-i18n="common.actions.blog">Blog</span></a>
                     </div>
                 </div>
             </article>
 
-            <!-- PROYECTO 3 -->
             <article class="proyecto-card">
-                <img class="proyecto-card__imagen" src="../assets/DataCrafter.png" alt="Logo de DataCrafter">
+                <img class="proyecto-card__imagen" src="../assets/DataCrafter.png" alt="Logo de DataCrafter" data-i18n-alt="projects.datacrafter.alt">
                 <div class="proyecto-card__contenido">
                     <h2 class="proyecto-card__titulo">DataCrafter</h2>
-                    <p class="proyecto-card__texto">Motor RAG y procesamiento documental. Integra React y Python con Azure AI (Document Intelligence, Cognitive Search, OpenAI) para extraer, vectorizar y consultar semánticamente datos desde PDFs e imágenes.</p>
+                    <p class="proyecto-card__texto" data-i18n="projects.datacrafter.description">Motor RAG y procesamiento documental. Integra React y Python con Azure AI (Document Intelligence, Cognitive Search, OpenAI) para extraer, vectorizar y consultar semánticamente datos desde PDFs e imágenes.</p>
                     <div class="proyecto-card__enlaces">
-                        <a class="proyecto-card__link" href="https://github.com/Gi0yis/DataCrafter"><img src="../assets/github.png" alt="github icon"> Github</a>
-                        <a class="proyecto-card__link" href="https://giotechnoo.blogspot.com/"><img src="../assets/logo-blogger.png" alt="blogger icon"> Blog</a>
+                        <a class="proyecto-card__link" href="https://github.com/Gi0yis/DataCrafter"><img src="../assets/github.png" alt="github icon"> <span data-i18n="common.actions.github">GitHub</span></a>
+                        <a class="proyecto-card__link" href="https://giotechnoo.blogspot.com/"><img src="../assets/logo-blogger.png" alt="blogger icon"> <span data-i18n="common.actions.blog">Blog</span></a>
                     </div>
                 </div>
             </article>
 
-            <!-- PROYECTO 4 -->
             <article class="proyecto-card">
-                <img class="proyecto-card__imagen" src="../assets/Euona.png" alt="Logo de Eunoa">
+                <img class="proyecto-card__imagen" src="../assets/Euona.png" alt="Logo de Eunoa" data-i18n-alt="projects.eunoa.alt">
                 <div class="proyecto-card__contenido">
                     <h2 class="proyecto-card__titulo">Eunoa</h2>
-                    <p class="proyecto-card__texto">Toma notas y registra la asistencia de tu clase de manera rápida y sencilla. Puedes escanear un código QR para mis alumnos.</p>
+                    <p class="proyecto-card__texto" data-i18n="projects.eunoa.description">Toma notas y registra la asistencia de tu clase de manera rápida y sencilla. Puedes escanear un código QR para mis alumnos.</p>
                     <div class="proyecto-card__enlaces">
-                        <a class="proyecto-card__link" href=""><img src="../assets/github.png" alt="github icon"> Github</a>
-                        <a class="proyecto-card__link" href="https://giotechnoo.blogspot.com/"><img src="../assets/logo-blogger.png" alt="blogger icon"> Blog</a>
+                        <a class="proyecto-card__link" href=""><img src="../assets/github.png" alt="github icon"> <span data-i18n="common.actions.github">GitHub</span></a>
+                        <a class="proyecto-card__link" href="https://giotechnoo.blogspot.com/"><img src="../assets/logo-blogger.png" alt="blogger icon"> <span data-i18n="common.actions.blog">Blog</span></a>
                     </div>
                 </div>
             </article>
 
-            <!-- PROYECTO 5 -->
             <article class="proyecto-card">
-                <img class="proyecto-card__imagen" src="../assets/pc2 (1).png" alt="Logo de PythagorasCalc">
+                <img class="proyecto-card__imagen" src="../assets/pc2 (1).png" alt="Logo de PythagorasCalc" data-i18n-alt="projects.pythagoras.alt">
                 <div class="proyecto-card__contenido">
                     <h2 class="proyecto-card__titulo">PythagorasCalc</h2>
-                    <p class="proyecto-card__texto">Es una aplicación móvil creada para calcular el lado faltante de un triángulo rectángulo.</p>
+                    <p class="proyecto-card__texto" data-i18n="projects.pythagoras.description">Es una aplicación móvil creada para calcular el lado faltante de un triángulo rectángulo.</p>
                     <div class="proyecto-card__enlaces">
-                        <a class="proyecto-card__link" href="https://github.com/Gi0yis/pythagoras-calculator"><img src="../assets/github.png" alt="github icon"> Github</a>
-                        <a class="proyecto-card__link" href="https://giotechnoo.blogspot.com/"><img src="../assets/logo-blogger.png" alt="blogger icon"> Blog</a>
+                        <a class="proyecto-card__link" href="https://github.com/Gi0yis/pythagoras-calculator"><img src="../assets/github.png" alt="github icon"> <span data-i18n="common.actions.github">GitHub</span></a>
+                        <a class="proyecto-card__link" href="https://giotechnoo.blogspot.com/"><img src="../assets/logo-blogger.png" alt="blogger icon"> <span data-i18n="common.actions.blog">Blog</span></a>
                     </div>
                 </div>
             </article>
+        </section>
 
-        </section> <!-- Fin de .proyectos-grid -->
-        
-        <!-- Copyright (igual que en index.html) -->
         <div class="terminal-output terminal-footer">
-            <p>(c) 2025 Giovanni López. Todos los derechos reservados.</p>
+            <p data-i18n="common.footer">(c) 2025 Giovanni López. Todos los derechos reservados.</p>
         </div>
 
-        <!-- Prompt final "listo" -->
         <div class="terminal-prompt terminal-prompt--final">
             <span class="prompt-symbol">&gt;</span>
             <span class="cursor">_</span>
         </div>
-
     </main>
-    
-    <script>
-        // 1. Encontrar el elemento que queremos rellenar
-        const loginSpan = document.querySelector('.terminal-login');
 
-        // 2. Obtener la fecha y hora actual
-        const now = new Date();
-
-        // 3. Nombres para formatear la fecha
-        const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
-        const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-        
-        // 4. Extraer cada parte
-        const dayName = days[now.getDay()];
-        const monthName = months[now.getMonth()];
-        const dayNum = now.getDate(); // Da el número, ej: 6
-        const year = now.getFullYear();
-        
-        // Formatea la hora como "21:53:00" (formato 24h)
-        const time = now.toLocaleTimeString('en-US', { 
-            hour12: false, 
-            hour: '2-digit', 
-            minute: '2-digit', 
-            second: '2-digit' 
-        });
-
-        // 5. Construir el texto final
-        const loginString = `Last login: ${dayName} ${monthName} ${dayNum} ${time} ${year} on ttys003`;
-
-        // 6. Poner el texto en la página
-        loginSpan.textContent = loginString;
-    </script>
-
+    <script src="../scripts/i18n.js"></script>
 </body>
 </html>

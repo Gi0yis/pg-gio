@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es-mx">
+<html lang="es-MX">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,12 +13,17 @@
     
     <link rel="stylesheet" href="../styles/style.css">
 </head>
-<body>
+<body data-page="about" data-tty="ttys002">
 
     <main class="terminal-body">
         
         <div class="terminal-line">
-            <span class="terminal-login"></span> </div>
+            <span class="terminal-login"></span>
+        </div>
+
+        <div class="language-switch" role="group" aria-label="Selector de idioma" data-i18n-aria-label="common.languageLabel">
+            <button type="button" class="language-switch__button" data-language-option="es">ES</button>
+            <button type="button" class="language-switch__button" data-language-option="en">EN</button>
         </div>
 
         <div class="terminal-prompt">
@@ -27,11 +32,12 @@
         </div>
         
         <nav class="terminal-nav">
-            <a href="../index.html">[ Inicio ]</a>
-            <a href="about.html">[ Sobre mí ]</a>
-            <a href="projects.html">[ Proyectos ]</a>
-            <a href="certificates.html">[ Certificados ]</a>
-            <a href="contact.html">[ Contacto ]</a> </nav>
+            <a href="../index.html" data-i18n="common.nav.home">[ Inicio ]</a>
+            <a href="about.html" data-i18n="common.nav.about">[ Sobre mí ]</a>
+            <a href="projects.html" data-i18n="common.nav.projects">[ Proyectos ]</a>
+            <a href="certificates.html" data-i18n="common.nav.certificates">[ Certificados ]</a>
+            <a href="contact.html" data-i18n="common.nav.contact">[ Contacto ]</a>
+        </nav>
 
         <div class="terminal-prompt">
             <span class="prompt-symbol">&gt;</span>
@@ -39,22 +45,22 @@
         </div>
         
         <div class="terminal-box">
-            <h1 class="presentacion__contenido__titulo">Sobre mí</h1>
-            <p class="presentacion__contenido__texto">Desarrollador backend con experiencia en sistemas empresariales y apasionado por la inteligencia artificial.</p>
+            <h1 class="presentacion__contenido__titulo" data-i18n="about.pageTitle">Sobre mí</h1>
+            <p class="presentacion__contenido__texto" data-i18n="about.intro">Desarrollador backend con experiencia en sistemas empresariales y apasionado por la inteligencia artificial.</p>
             <br>
-            <p class="presentacion__contenido__texto">Mi experiencia profesional se centra en el desarrollo y personalización de módulos ERP (ecosistema Odoo), construyendo la lógica de negocio a nivel backend con Python, XML y OWL. Me encargo de la gestión de bases de datos, consumo de APIs y la adaptación de sistemas complejos a flujos de trabajo específicos.</p>
+            <p class="presentacion__contenido__texto" data-i18n="about.paragraph1">Mi experiencia profesional se centra en el desarrollo y personalización de módulos ERP (ecosistema Odoo), construyendo la lógica de negocio a nivel backend con Python, XML y OWL. Me encargo de la gestión de bases de datos, consumo de APIs y la adaptación de sistemas complejos a flujos de trabajo específicos.</p>
             <br>
-            <p class="presentacion__contenido__texto">De manera paralela, a través de proyectos personales y Hackathones organizados por Microsoft, he explorado el potencial de los servicios de Azure y la IA para resolver problemas complejos. En estos entornos de innovación, he implementado soluciones en la nube que integran APIs de búsqueda avanzadas, análisis de texto y modelos de lenguaje de última generación.</p>
+            <p class="presentacion__contenido__texto" data-i18n="about.paragraph2">De manera paralela, a través de proyectos personales y Hackathones organizados por Microsoft, he explorado el potencial de los servicios de Azure y la IA para resolver problemas complejos. En estos entornos de innovación, he implementado soluciones en la nube que integran APIs de búsqueda avanzadas, análisis de texto y modelos de lenguaje de última generación.</p>
             <br>
-            <p class="presentacion__contenido__texto">Más allá del desarrollo de software, me apasiona la enseñanza y he tenido la oportunidad de formar a más de 100 estudiantes en diversas instituciones educativas. He diseñado planes de estudio adaptados a diferentes niveles, abarcando desde los fundamentos de la programación hasta lenguajes como Python, Java, JavaScript y C. Además, he fomentado la exploración de la inteligencia artificial y el desarrollo web a través de proyectos prácticos.</p>
+            <p class="presentacion__contenido__texto" data-i18n="about.paragraph3">Más allá del desarrollo de software, me apasiona la enseñanza y he tenido la oportunidad de formar a más de 100 estudiantes en diversas instituciones educativas. He diseñado planes de estudio adaptados a diferentes niveles, abarcando desde los fundamentos de la programación hasta lenguajes como Python, Java, JavaScript y C. Además, he fomentado la exploración de la inteligencia artificial y el desarrollo web a través de proyectos prácticos.</p>
             <br>
-            <p class="presentacion__contenido__texto">Mi interés radica en la investigación y aplicación de la inteligencia artificial en diversos campos, especialmente en la automatización de procesos y el análisis de datos.</p>
+            <p class="presentacion__contenido__texto" data-i18n="about.paragraph4">Mi interés radica en la investigación y aplicación de la inteligencia artificial en diversos campos, especialmente en la automatización de procesos y el análisis de datos.</p>
             <br>
-            <p class="presentacion__contenido__texto">Si desea obtener más información sobre mi trabajo o explorar oportunidades de colaboración en proyectos, no dude en contactarme.</p>
+            <p class="presentacion__contenido__texto" data-i18n="about.paragraph5">Si desea obtener más información sobre mi trabajo o explorar oportunidades de colaboración en proyectos, no dude en contactarme.</p>
         </div>
         
         <div class="terminal-output terminal-footer">
-            <p>(c) 2025 Giovanni López. Todos los derechos reservados.</p>
+            <p data-i18n="common.footer">(c) 2025 Giovanni López. Todos los derechos reservados.</p>
         </div>
 
         <div class="terminal-prompt terminal-prompt--final">
@@ -64,37 +70,7 @@
 
     </main>
 
-    <script>
-        // 1. Encontrar el elemento que queremos rellenar
-        const loginSpan = document.querySelector('.terminal-login');
-
-        // 2. Obtener la fecha y hora actual
-        const now = new Date();
-
-        // 3. Nombres para formatear la fecha
-        const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
-        const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-        
-        // 4. Extraer cada parte
-        const dayName = days[now.getDay()];
-        const monthName = months[now.getMonth()];
-        const dayNum = now.getDate(); // Da el número, ej: 6
-        const year = now.getFullYear();
-        
-        // Formatea la hora como "21:53:00" (formato 24h)
-        const time = now.toLocaleTimeString('en-US', { 
-            hour12: false, 
-            hour: '2-digit', 
-            minute: '2-digit', 
-            second: '2-digit' 
-        });
-
-        // 5. Construir el texto final
-        const loginString = `Last login: ${dayName} ${monthName} ${dayNum} ${time} ${year} on ttys002`;
-
-        // 6. Poner el texto en la página
-        loginSpan.textContent = loginString;
-    </script>
+    <script src="../scripts/i18n.js"></script>
 
 </body>
 </html>

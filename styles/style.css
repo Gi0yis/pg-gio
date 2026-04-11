@@ -78,6 +78,33 @@ html, body {
     color: var(--fondo);
 }
 
+.language-switch {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 0 0 20px 10px;
+}
+
+.language-switch__button {
+    font-family: var(--fuente-terminal);
+    font-size: 0.9em;
+    font-weight: 700;
+    color: var(--texto-secundario);
+    background-color: var(--color-neutro);
+    border: 1px solid var(--color-terciario);
+    border-radius: 4px;
+    padding: 4px 10px;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.language-switch__button:hover,
+.language-switch__button.is-active {
+    background-color: var(--color-secundario);
+    color: var(--fondo);
+    border-color: var(--color-secundario);
+}
+
 /* Estilo del Prompt (>) */
 .terminal-prompt {
     display: flex;
@@ -182,6 +209,9 @@ html, body {
     }
     .terminal-body {
         padding: 4%;
+    }
+    .language-switch {
+        margin-left: 0;
     }
     .terminal-nav {
         gap: 10px;
